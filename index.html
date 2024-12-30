@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="front.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise.com</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('We.png'); /* PC background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #8d4d4d;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;    /* Centers vertically */
+        }
+
+        /* Container styles */
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Input field styles */
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #ff1500;
+            color: rgb(255, 255, 255);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #030303;
+        }
+
+        /* Error message styles */
+        .error {
+            color: rgb(255, 0, 0);
+            margin-top: 10px;
+        }
+
+        /* Responsive styles for mobile devices */
+        @media only screen and (max-width: 768px) {
+            body {
+                background-image: url('We.png'); /* Mobile-specific background */
+                background-size: cover;
+                background-position: center;
+            }
+
+            .container {
+                width: 70%; /* Adjust container width for smaller screens */
+            }
+
+            input {
+                width: 80%; /* Input field adjusts to screen width */
+            }
+
+            button {
+                width: 80%; /* Button stretches for better usability */
+                font-size: 18px; /* Slightly larger text for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME BABEE😘!</h1>
+        <p>Lest Play Game</p>
+        <p>Enter My DOB To Unlock:</p>
+        <input type="password" id="code" placeholder="Enter My Date Of Birth">
+        <br>
+        <button onclick="checkCode()">Submit</button>
+        <p class="error" id="error-message"></p>
+    </div>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('code').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (code === '2007.04.16') { // Replace '2007.04.16' with your actual secret code
+                window.location.href = 'surprise.html'; // Redirects to the surprise page
+            } else {
+                errorMessage.textContent = 'Oops! Timilaii Mero DOB Tha xaina. Try again Babee.';
+            }
+        }
+    </script>
+</body>
+</html>
